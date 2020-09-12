@@ -3016,10 +3016,10 @@ int Measurements::CalcTdr(QVector <rawData> *data)
         double X=0;
         double Gre=0;
         double Gim=0;
-        double FQ=0;
+ //       double FQ=0;
         if (i < asize)
         {
-            FQ = data->at(i).fq;
+ //           FQ = data->at(i).fq;
             R = data->at(i).r;
             X = data->at(i).x;
 
