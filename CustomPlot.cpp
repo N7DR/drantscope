@@ -1,8 +1,9 @@
 #include "CustomPlot.h"
 
 
-CustomPlot::CustomPlot(int _numGraphs, QWidget *parent)
-    : m_graphCount(_numGraphs), QCustomPlot(parent)
+CustomPlot::CustomPlot(int _numGraphs, QWidget *parent) : 
+  QCustomPlot(parent),
+  m_graphCount(_numGraphs) //, QCustomPlot(parent)
 {
 }
 
