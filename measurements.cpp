@@ -2655,9 +2655,9 @@ void Measurements::importData(QString _name)
                     return;
                 }
 */
-                if(! ((iUnit == 1) && (iFormat == 1) // S, MA
-                        || (iUnit == 1) && (iFormat == 2)  // S, RI
-                        || (iUnit == 2) && (iFormat == 2)  // Z, RI
+                if(! ( ( (iUnit == 1) and (iFormat == 1) ) or  // S, MA
+                       ( (iUnit == 1) and (iFormat == 2) ) or  // S, RI
+                       ( (iUnit == 2) and (iFormat == 2) )     // Z, RI
                     ))
                 {
                     return;
