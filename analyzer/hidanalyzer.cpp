@@ -396,8 +396,8 @@ bool hidAnalyzer::searchAnalyzer(bool arrival)
         cur_dev = devs;
         while (cur_dev != nullptr) {
             if (QString::fromWCharArray(cur_dev->serial_number) == m_serialNumber) {
-                if (cur_dev->vendor_id == RE_VID && cur_dev->product_id == RE_PID ||
-                    cur_dev->vendor_id == RE_BOOT_VID && cur_dev->product_id == RE_BOOT_PID ) {
+                if ( (cur_dev->vendor_id == RE_VID and cur_dev->product_id == RE_PID) or
+                     ( cur_dev->vendor_id == RE_BOOT_VID and cur_dev->product_id == RE_BOOT_PID) ) {
                     m_mutexSearch.unlock();
                     return false;
                 }
