@@ -4363,19 +4363,19 @@ void MainWindow::on_Z0Changed(double _Z0)
 void MainWindow::updateGraph ()
 {
     try {
-        QCustomPlot* plot = nullptr;
+ //       QCustomPlot* plot = nullptr;
         QString str = ui->tabWidget->currentWidget()->objectName();
         if( str == "tab_1")
         {
-            plot = m_swrWidget;
+  //          plot = m_swrWidget;
             m_swrWidget->replot();
         }else if(str == "tab_2")
         {
-            plot = m_phaseWidget;
+  //          plot = m_phaseWidget;
             m_phaseWidget->replot();
         }else if(str == "tab_3")
         {
-            plot = m_rsWidget;
+  //          plot = m_rsWidget;
 
     //        int count = m_rsWidget->legend->itemCount();
     //        for (int i=4; i<count; i++) {
@@ -4386,24 +4386,24 @@ void MainWindow::updateGraph ()
             m_rsWidget->replot();
         }else if(str == "tab_4")
         {
-            plot = m_rpWidget;
+   //         plot = m_rpWidget;
             m_rpWidget->replot();
         }else if(str == "tab_5")
         {
-            plot = m_rlWidget;
+   //         plot = m_rlWidget;
             m_rlWidget->replot();
         }else if(str == "tab_6")
         {
-            plot = m_tdrWidget;
+  //          plot = m_tdrWidget;
             m_tdrWidget->replot();
         }else if(str == "tab_7")
         {
             resizeWnd();
-            plot = m_smithWidget;
+  //          plot = m_smithWidget;
             m_smithWidget->replot();
         }else if(str == "tab_8")
         {
-            plot = m_userWidget;
+ //           plot = m_userWidget;
             m_userWidget->replot();
         }
     } catch(...) {
