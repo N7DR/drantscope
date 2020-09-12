@@ -112,7 +112,7 @@ AA230FirmwareUpdater::FirmwareInfo AA230FirmwareUpdater::firmwareInfo(const ReDe
     arr.clear();
     if (m_port.waitForReadyRead(500))
     {
-        while(m_port.bytesAvailable() < sizeof(FirmwareInfo))
+        while(m_port.bytesAvailable() < static_cast<qint64>(sizeof(FirmwareInfo)))
         {
             m_port.waitForReadyRead(50);
             ++ probe;
@@ -168,7 +168,7 @@ bool AA230FirmwareUpdater::setInBootMode(ReDeviceInfo &dev)
     arr.clear();
     if (m_port.waitForReadyRead(500))
     {
-        while(m_port.bytesAvailable() < sizeof(FirmwareInfo))
+        while(m_port.bytesAvailable() < static_cast<qint64>(sizeof(FirmwareInfo)))
         {
             m_port.waitForReadyRead(50);
             ++ probe;
