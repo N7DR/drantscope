@@ -7,8 +7,9 @@
 
 //#define SETTINGS_PATH "AntScope2.ini"
 
-
+#if !defined(__GNUC__)
 #pragma warning (disable : 4068 )
+#endif
 
 //#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-parameter"
