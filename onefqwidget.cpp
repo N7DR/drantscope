@@ -4,6 +4,9 @@ static QString msgFormat = "FQ: %1\nSWR: %2\nRhoPhase: %3\nRhoMod: %4\nR: %5\nX:
 
 OneFqWidget::OneFqWidget(int _points, QWidget *parent) :
     QWidget(parent),
+    m_bgColor(0,0,0,180),
+    m_penColor(255,155,255,180),
+    m_textColor(Qt::white),
     m_points(_points),
     m_hints(true,true),
     m_x(850),
@@ -13,10 +16,10 @@ OneFqWidget::OneFqWidget(int _points, QWidget *parent) :
     m_mainX(177),
     m_mainY(131),
     m_mainBiasX(0),
-    m_mainBiasY(0),
-    m_bgColor(0,0,0,180),
-    m_penColor(255,155,255,180),
-    m_textColor(Qt::white)
+    m_mainBiasY(0)
+//    m_bgColor(0,0,0,180),
+//    m_penColor(255,155,255,180),
+//    m_textColor(Qt::white)
 {
     setWindowFlags(Qt::FramelessWindowHint |
                    Qt::Tool |
