@@ -8,8 +8,10 @@
 
 AnalyzerData::AnalyzerData(int _model, QWidget *parent) :
     QDialog(parent),
+    m_model(_model),
     ui(new Ui::AnalyzerData),
-    m_isSelected(false), m_model(_model),
+//    m_model(_model),
+    m_isSelected(false), //m_model(_model),
     progressDialog(nullptr)
 {
     ui->setupUi(this);
