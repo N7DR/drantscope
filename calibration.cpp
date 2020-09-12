@@ -4,13 +4,15 @@
 Calibration::Calibration(QObject *parent) : QObject(parent),
     m_state(CALIB_NONE),
     m_dotsCount(0),
-    m_dotsNumber(500),
     m_onlyOneCalib(false),
+//    m_dotsNumber(500),
+//    m_onlyOneCalib(false),
     m_Z0(50),
     m_OSLCalibrationEnabled(false),
     m_OSLCalibrationPerformed(false),
     m_analyzer(NULL),
-    m_settings(NULL)
+    m_settings(NULL),
+    m_dotsNumber(500)
 {
 
     //WCHAR path[MAX_PATH];
