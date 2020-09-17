@@ -12,7 +12,7 @@ class AntScopeUpdateDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AntScopeUpdateDialog(QWidget *parent = 0);
+    explicit AntScopeUpdateDialog(QWidget *parent = nullptr);
     ~AntScopeUpdateDialog();
 
     void setAsNewVersion();
@@ -29,7 +29,7 @@ private slots:
     void on_progress(int percent);
 
 private:
-    Ui::AntScopeUpdateDialog *ui;
+    Ui::AntScopeUpdateDialog *ui { nullptr };
 };
 
 #endif // ANTSCOPEUPDATEDIALOG_H

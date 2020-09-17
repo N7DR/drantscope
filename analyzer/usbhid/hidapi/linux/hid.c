@@ -1097,15 +1097,23 @@ int HID_API_EXPORT hid_read_timeout(hid_device *dev, unsigned char *data, size_t
 	/* There's an input report queued up. Return it. */
 	if (dev->input_reports) {
 		/* Return the first one */
-		bytes_read = return_data(dev, data, length);
+		bytes_read =  return_data(dev, data, length);
 		goto ret;
+//        pthread_mutex_unlock(&dev->mutex);
+//	pthread_cleanup_pop(0);
+
+//	return bytes_read;
 	}
 
 	if (dev->shutdown_thread) {
 		/* This means the device has been disconnected.
 		   An error code of -1 should be returned. */
-		bytes_read = -1;
+		 bytes_read =-1;
 		goto ret;
+//        pthread_mutex_unlock(&dev->mutex);
+//	pthread_cleanup_pop(0);
+
+//	return bytes_read;
 	}
 
 	if (milliseconds == -1) {
@@ -1305,7 +1313,12 @@ int HID_API_EXPORT_CALL hid_get_indexed_string(hid_device *dev, int string_index
 
 HID_API_EXPORT const wchar_t * HID_API_CALL  hid_error(hid_device *dev)
 {
-	return NULL;
+// N7DR: use dev so as to avoid compiler warning
+
+      if (dev)
+        return NULL;
+
+       return NULL;
 }
 
 
